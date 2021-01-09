@@ -12,9 +12,6 @@ import game.model.Game
 
 object ArithmeticGambling extends JFXApp{
 
-  // TODO
-  // val gameModel = new game.model.Game(...)
-
   val game = new Game()
 
   var answerField: TextField = new TextField {
@@ -93,12 +90,8 @@ object ArithmeticGambling extends JFXApp{
           add(new GUIButton("Dev $1000", new cheatAction(game)), 4, 7)
         }
       )
-//      addEventHandler(KeyEvent.ANY, new KeyBoardInputs(game))
     }
-//    addEventFilter(KeyEvent.ANY, (event: KeyEvent) => {
-//      answerField.text.value = game.displayNumber().toString
-//      Math.max(5,6)
-//    })
+
     addEventFilter(MouseEvent.MOUSE_CLICKED, (event: MouseEvent) => {
       answerField.text.value = game.displayNumber().toString
       expressionField.text.value = game.displayedExpression.toString
